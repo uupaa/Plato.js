@@ -1,0 +1,28 @@
+{
+  "name":           "uupaa.plato.js",
+  "version":        "0.8.0",
+  "description":    "Plato support utility.",
+  "url":            "https://github.com/uupaa/Plato.js",
+  "keywords":       ["Plato", "util", "uupaa", "WebModule"],
+  "repository": {
+    "type":         "git",
+    "url":          "https://github.com/uupaa/Plato.js.git"
+  },
+  "scripts": {
+    "lint":         "node ./bin/Plato.js --title Plato --verbose bin/Plato.js; open lint/plato/index.html"
+  },
+  "x-build": {
+    "inputs":       ["lib/Plato.js"],
+    "outpus":       ""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "uupaa.valid.js": ""
+  },
+  "lib":            "./lib/",
+  "main":           "./index.js",
+  "author":         "uupaa <uupaa.js@gmail.com>",
+  "license":        "MIT",
+  "contributors":   []
+}
