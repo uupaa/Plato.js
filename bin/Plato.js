@@ -28,7 +28,7 @@ var io      = _loadCurrentDirectoryPackageJSON();
 var options = _parseCommandLineOptions({
         help:       false,          // Boolean: true is show help.
         verbose:    false,          // Boolean: true is verbose mode.
-        title:      "",             // String: title.
+        title:      io.title,       // String: title.
         output:     "./lint/plato", // String: output dir.
         inputs:     io.inputs       // StringArray: input files. [file, ...]
     });
@@ -55,8 +55,9 @@ function _loadCurrentDirectoryPackageJSON() {
     var build  = json["x-build"] || json["build"] || {};
     var inputs = build.inputs || [];
     var output = build.output || "";
+    var title  = json.name || "";
 
-    return { inputs: inputs, output: output };
+    return { inputs: inputs, output: output, title: title };
 }
 
 function _parseCommandLineOptions(options) {
