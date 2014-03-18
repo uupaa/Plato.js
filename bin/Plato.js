@@ -12,7 +12,7 @@ var _USAGE = '\n'+
 '                         input-file [input-file ...]\n' +
 '\n'+
 '   See:\n'+
-'       https://github.com/uupaa/Plato.js/wiki/Plato.js \n';
+'       https://github.com/uupaa/Plato.js/wiki/Plato\n';
 
 var _CONSOLE_COLOR = {
         RED:    "\u001b[31m",

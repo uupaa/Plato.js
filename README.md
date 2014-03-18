@@ -5,7 +5,7 @@ Plato support utility.
 
 # Document
 
-https://github.com/uupaa/Plato.js/wiki/Plato.js
+https://github.com/uupaa/Plato.js/wiki/Plato
 
 # How to use
 
