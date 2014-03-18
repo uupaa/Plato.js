@@ -7,12 +7,12 @@ var _USAGE = '\n'+
 '   Usage:\n' +
 '       node bin/Plato.js [--help]\n' +
 '                         [--verbose]\n' +
-'                         [--title]\n' +
-'                         [--output] dir\n' +
+'                         [--title page-title]\n' +
+'                         [--output output-dir]\n' +
 '                         input-file [input-file ...]\n' +
 '\n'+
 '   See:\n'+
-'       https://github.com/uupaa/Plato.js/wiki/Plato \n';
+'       https://github.com/uupaa/Plato.js/wiki/Plato.js \n';
 
 var _CONSOLE_COLOR = {
         RED:    "\u001b[31m",
