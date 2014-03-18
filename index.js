@@ -1,2 +1,2 @@
-module.exports = require("./lib/Plato");
+module.exports = require("./bin/Plato");
 
