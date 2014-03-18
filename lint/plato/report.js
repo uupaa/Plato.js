@@ -64,49 +64,49 @@ __report = {
           "line": 4,
           "complexity": {
             "sloc": {
-              "physical": 78,
-              "logical": 62
+              "physical": 79,
+              "logical": 64
             },
-            "cyclomatic": 18,
+            "cyclomatic": 19,
             "halstead": {
               "operators": {
                 "distinct": 21,
-                "total": 156,
+                "total": 162,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 76,
-                "total": 166,
+                "distinct": 77,
+                "total": 173,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 322,
-              "vocabulary": 97,
-              "difficulty": 22.934210526315788,
-              "volume": 2125.1719351842553,
-              "effort": 48739.14056613364,
-              "bugs": 0.7083906450614185,
-              "time": 2707.730031451869
+              "length": 335,
+              "vocabulary": 98,
+              "difficulty": 23.59090909090909,
+              "volume": 2215.927797778595,
+              "effort": 52275.75122941322,
+              "bugs": 0.7386425992595317,
+              "time": 2904.2084016340677
             },
             "params": 2
           }
         },
         "module": "bin/Plato.js",
-        "maintainability": 57.314007882792815
+        "maintainability": 56.87116982959595
       }
     }
   ],
   "summary": {
     "total": {
-      "sloc": 213,
-      "maintainability": 126.79347622932184
+      "sloc": 214,
+      "maintainability": 126.35063817612496
     },
     "average": {
-      "sloc": 106,
-      "maintainability": "63.40"
+      "sloc": 107,
+      "maintainability": "63.18"
     }
   }
 }
