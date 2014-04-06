@@ -3,16 +3,17 @@
 
 (function(global) {
 
-var _USAGE = '\n'+
-'   Usage:\n' +
-'       node bin/Plato.js [--help]\n' +
-'                         [--verbose]\n' +
-'                         [--title page-title]\n' +
-'                         [--output output-dir]\n' +
-'                         input-file [input-file ...]\n' +
-'\n'+
-'   See:\n'+
-'       https://github.com/uupaa/Plato.js/wiki/Plato\n';
+var _USAGE = _multiline(function() {/*
+    Usage:
+        node bin/Plato.js [--help]
+                          [--verbose]
+                          [--title page-title]
+                          [--output output-dir]
+                          input-file [input-file ...]
+
+    See:
+        https://github.com/uupaa/Plato.js/wiki/Plato
+*/});
 
 var _CONSOLE_COLOR = {
         RED:    "\u001b[31m",
@@ -77,6 +78,11 @@ function _parseCommandLineOptions(options) {
         }
     }
     return options;
+}
+
+function _multiline(fn) { // @arg Function:
+                          // @ret String:
+    return (fn + "").split("\n").slice(1, -1).join("\n");
 }
 
 })((this || 0).self || global);
