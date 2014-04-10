@@ -1,6 +1,6 @@
 {
   "name":           "uupaa.plato.js",
-  "version":        "0.8.7",
+  "version":        "0.8.8",
   "description":    "Plato support utility.",
   "url":            "https://github.com/uupaa/Plato.js",
   "keywords":       ["Plato", "util", "uupaa", "WebModule"],
@@ -18,7 +18,6 @@
   "dependencies": {
   },
   "devDependencies": {
-    "uupaa.valid.js": ""
   },
   "bin":            "./bin/",
   "lib":            "./lib/",
