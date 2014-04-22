@@ -1,0 +1,20 @@
+{
+  "name": {
+    "git": "Plato.js",
+    "npm": "uupaa.plato.js"
+  },
+  "build": {
+    "files": [
+      "lib/Plato.js"
+    ],
+    "output": "release/Plato.min.js",
+    "target": []
+  },
+  "moduleTargets": {
+    "uupaa.plato.js": []
+  },
+  "dependenciesFiles": [],
+  "dependenciesModules": [],
+  "devDependenciesFiles": [],
+  "devDependenciesModules": []
+}
