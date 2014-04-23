@@ -25,20 +25,20 @@ var _CONSOLE_COLOR = {
 var Plato   = require("../lib/Plato");
 var fs      = require("fs");
 var argv    = process.argv.slice(2);
-var io      = _loadCurrentDirectoryPackageJSON();
+var package = _loadCurrentDirectoryPackageJSON();
 var options = _parseCommandLineOptions({
         help:       false,          // Boolean: true is show help.
         verbose:    false,          // Boolean: true is verbose mode.
-        title:      io.title,       // String: title.
+        title:      package.title,  // String: title.
         output:     "./lint/plato", // String: output dir.
-        inputs:     io.inputs       // StringArray: input files. [file, ...]
+        files:      package.files   // StringArray: input files. [file, ...]
     });
 
 if (options.help) {
     console.log(_CONSOLE_COLOR.YELLOW + _USAGE + _CONSOLE_COLOR.CLEAR);
     return;
 }
-if (!options.inputs.length) {
+if (!options.files.length) {
     console.log(_CONSOLE_COLOR.RED + "Input files are empty." + _CONSOLE_COLOR.CLEAR);
     return;
 }
@@ -47,18 +47,18 @@ Plato({
     "verbose":      options.verbose,
     "title":        options.title,
     "output":       options.output,
-    "inputs":       options.inputs
+    "files":        options.files
 }, function() { });
 
 function _loadCurrentDirectoryPackageJSON() {
     var path   = "./package.json";
     var json   = fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, "utf8")) : {};
     var build  = json["x-build"] || json["build"] || {};
-    var inputs = build.inputs || [];
+    var files  = build.files || build.inputs || []; // inputs was deprecated.
     var output = build.output || "";
     var title  = json.name || "";
 
-    return { inputs: inputs, output: output, title: title };
+    return { files: files, output: output, title: title };
 }
 
 function _parseCommandLineOptions(options) {
@@ -72,8 +72,8 @@ function _parseCommandLineOptions(options) {
         case "--output":    options.output = argv[++i]; break;
         default:
             var file = argv[i];
-            if (options.inputs.indexOf(file) < 0) { // avoid duplicate
-                options.inputs.push(file);
+            if (options.files.indexOf(file) < 0) { // avoid duplicate
+                options.files.push(file);
             }
         }
     }
