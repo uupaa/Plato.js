@@ -1,9 +1,9 @@
 {
   "name":           "uupaa.plato.js",
-  "version":        "0.8.14",
+  "version":        "0.8.15",
   "description":    "Plato support utility.",
   "url":            "https://github.com/uupaa/Plato.js",
-  "keywords":       ["Plato", "util", "uupaa", "WebModule"],
+  "keywords":       ["Plato", "util", "uupaa", "WebModule", "Stable"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/uupaa/Plato.js.git"
@@ -18,6 +18,7 @@
     "files":        ["lib/Plato.js"],
     "output":       "release/Plato.min.js",
     "target":       [],
+    "labels":       ["@dev"],
     "module": {
       "develop":    [],
       "release":    []
