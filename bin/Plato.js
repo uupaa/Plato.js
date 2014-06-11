@@ -54,8 +54,8 @@ function _loadCurrentDirectoryPackageJSON() {
     var path   = "./package.json";
     var json   = fs.existsSync(path) ? JSON.parse(fs.readFileSync(path, "utf8")) : {};
     var build  = json["x-build"] || json["build"] || {};
-    var files  = build.files || build.inputs || []; // inputs was deprecated.
-    var output = build.output || "";
+    var files  = build["source"] || build["files"] || build["inputs"] || []; // inputs was deprecated.
+    var output = build["output"] || "";
     var title  = json.name || "";
 
     return { files: files, output: output, title: title };
