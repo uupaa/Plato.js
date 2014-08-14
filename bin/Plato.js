@@ -1,6 +1,3 @@
-// @name: bin/Plato.js
-// @require: Plato.js, fs
-
 (function(global) {
 
 var _USAGE = _multiline(function() {/*
